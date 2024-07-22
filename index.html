@@ -18,32 +18,32 @@
     <main class="mt-5">
         <section class="d-flex justify-content-center">
             <div class="container bg-transparent">
-                <div class="row g-4">
+                <div class="row ">
                     <!-- Sidebar de búsqueda y filtros -->
-                    <div class="col-lg-3 bg-transparent rounded-lg px-4">
+                    <div class="col-lg-3 bg-transparent rounded-lg px-2">
                         <section class="rounded-3 bg-light p-lg-3">
                             <h2 class="h5 font-weight-semibold text-gray-800 mb-4">Buscar</h2>
                             <div class="mb-4">
                                 <div class="input-group">
                                     <input type="text" class="form-control" placeholder="Buscar trámite">
                                     <div class="input-group-append">
-                                        <button class="btn btn-success" type="button" id="btnSearchTramite">
+                                        <button class="btn custom-btn" type="button" id="btnSearchTramite">
                                             <img class="w-25" src="./assets/svg/search.svg" alt="">
                                         </button>
                                     </div>
                                 </div>
                             </div>
 
-                            <h3 class="h6 font-weight-semibold text-gray-800 mb-4">Filtrar por:</h3>
+                            <h3 class="h6 font-weight-semibold mb-4">Filtrar por:</h3>
 
                             <div id="accordion">
                                 <!-- Dependencia -->
-                                <div class="card mb-4">
-                                    <div class="card-header" id="headingDependencia">
+                                <div class="card mb-4 border-0">
+                                    <div class="card-header p-0 border-0" id="headingDependencia">
                                         <h5 class="mb-0">
-                                            <button class="btn btn-link w-100 text-left" data-toggle="collapse"
-                                                data-target="#collapseDependencia" aria-expanded="true"
-                                                aria-controls="collapseDependencia">
+                                            <button class="btn btn-link w-100 text-left text-black p-2"
+                                                data-toggle="collapse" data-target="#collapseDependencia"
+                                                aria-expanded="true" aria-controls="collapseDependencia">
                                                 Dependencia
                                                 <i class="fa fa-chevron-down ml-1"></i>
                                             </button>
@@ -52,25 +52,36 @@
 
                                     <div id="collapseDependencia" class="collapse" aria-labelledby="headingDependencia"
                                         data-parent="#accordion">
-                                        <div class="card-body pl-3">
-                                            <ul class="list-unstyled">
-                                                <li class="py-1 px-2 hover:bg-success rounded">Dependencia 1</li>
-                                                <li class="py-1 px-2 hover:bg-success rounded">Dependencia 2</li>
-                                                <li class="py-1 px-2 hover:bg-success rounded">Dependencia 3</li>
-                                                <li class="py-1 px-2 hover:bg-success rounded">Dependencia 4</li>
-                                                <li class="py-1 px-2 hover:bg-success rounded">Dependencia 5</li>
+                                        <div class="card-body p-0">
+                                            <ul class="list-unstyled mb-0">
+                                                <a href="#" class="hover-success text-black">
+                                                    <li class="py-2 px-1 rounded"><u>Todos</u></li>
+                                                </a>
+                                                <a href="#" class="hover-success text-black">
+                                                    <li class="py-2 px-1 rounded"><u>Tesorería Municipal</u></li>
+                                                </a>
+                                                <a href="#" class="hover-success text-black">
+                                                    <li class="py-2 px-1 rounded"><u>Ordenamiento Territorial</u></li>
+                                                </a>
+                                                <a href="#" class="hover-success text-black">
+                                                    <li class="py-2 px-1 rounded"><u>SISBÉN</u></li>
+                                                </a>
+                                                <a href="#" class="hover-success text-black">
+                                                    <li class="py-2 px-1 rounded"><u>Secretaria General y de
+                                                            Gobierno</u></li>
+                                                </a>
                                             </ul>
                                         </div>
                                     </div>
                                 </div>
 
                                 <!-- Estado automatización -->
-                                <div class="card mb-4">
-                                    <div class="card-header" id="headingEstado">
+                                <div class="card mb-4 border-0">
+                                    <div class="card-header p-0 border-0" id="headingEstado">
                                         <h5 class="mb-0">
-                                            <button class="btn btn-link w-100 text-left" data-toggle="collapse"
-                                                data-target="#collapseEstado" aria-expanded="false"
-                                                aria-controls="collapseEstado">
+                                            <button class="btn btn-link w-100 text-left text-black p-2"
+                                                data-toggle="collapse" data-target="#collapseEstado"
+                                                aria-expanded="false" aria-controls="collapseEstado">
                                                 Estado automatización
                                                 <i class="fa fa-chevron-down ml-1"></i>
                                             </button>
@@ -79,25 +90,32 @@
 
                                     <div id="collapseEstado" class="collapse" aria-labelledby="headingEstado"
                                         data-parent="#accordion">
-                                        <div class="card-body pl-3">
-                                            <ul class="list-unstyled">
-                                                <li class="py-1 px-2 hover:bg-success rounded">Automatización 1</li>
-                                                <li class="py-1 px-2 hover:bg-success rounded">Automatización 2</li>
-                                                <li class="py-1 px-2 hover:bg-success rounded">Automatización 3</li>
-                                                <li class="py-1 px-2 hover:bg-success rounded">Automatización 4</li>
-                                                <li class="py-1 px-2 hover:bg-success rounded">Automatización 5</li>
+                                        <div class="card-body p-0">
+                                            <ul class="list-unstyled mb-0">
+                                                <a href="#" class="hover-success text-black">
+                                                    <li class="py-1 px-2 rounded"><u>En línea</u></li>
+                                                </a>
+                                                <a href="#" class="hover-success text-black">
+                                                    <li class="py-1 px-2 rounded"><u>Parcialmente en línea</u></li>
+                                                </a>
+                                                <a href="#" class="hover-success text-black">
+                                                    <li class="py-1 px-2 rounded"><u>Presencial</u></li>
+                                                </a>
+                                                <a href="#" class="hover-success text-black">
+                                                    <li class="py-1 px-2 rounded"><u>Sin especificar</u></li>
+                                                </a>
                                             </ul>
                                         </div>
                                     </div>
                                 </div>
 
                                 <!-- Costo -->
-                                <div class="card mb-4">
-                                    <div class="card-header" id="headingCosto">
+                                <div class="card mb-4 border-0">
+                                    <div class="card-header p-0 border-0" id="headingCosto">
                                         <h5 class="mb-0">
-                                            <button class="btn btn-link w-100 text-left" data-toggle="collapse"
-                                                data-target="#collapseCosto" aria-expanded="false"
-                                                aria-controls="collapseCosto">
+                                            <button class="btn btn-link w-100 text-left text-black p-2"
+                                                data-toggle="collapse" data-target="#collapseCosto"
+                                                aria-expanded="false" aria-controls="collapseCosto">
                                                 Costo
                                                 <i class="fa fa-chevron-down ml-1"></i>
                                             </button>
@@ -106,28 +124,26 @@
 
                                     <div id="collapseCosto" class="collapse" aria-labelledby="headingCosto"
                                         data-parent="#accordion">
-                                        <div class="card-body pl-3">
-                                            <ul class="list-unstyled">
-                                                <a href="#">
-                                                    <li class="py-1 px-2 hover:bg-success rounded">Costo 1</li>
+                                        <div class="card-body p-0">
+                                            <ul class="list-unstyled mb-0">
+                                                <a href="#" class="hover-success text-black">
+                                                    <li class="py-1 px-2 rounded"><u>Requieren Pago</u></li>
                                                 </a>
-
-                                                <li class="py-1 px-2 hover:bg-success rounded">Costo 2</li>
-                                                <li class="py-1 px-2 hover:bg-success rounded">Costo 3</li>
-                                                <li class="py-1 px-2 hover:bg-success rounded">Costo 4</li>
-                                                <li class="py-1 px-2 hover:bg-success rounded">Costo 5</li>
+                                                <a href="#" class="hover-success text-black">
+                                                    <li class="py-1 px-2 rounded"><u>No requieren Pago</u></li>
+                                                </a>
                                             </ul>
                                         </div>
                                     </div>
                                 </div>
 
                                 <!-- Estado trámite -->
-                                <div class="card mb-4">
-                                    <div class="card-header" id="headingEstadoTramite">
+                                <div class="card mb-4 border-0">
+                                    <div class="card-header p-0 border-0" id="headingEstadoTramite">
                                         <h5 class="mb-0">
-                                            <button class="btn btn-link w-100 text-left" data-toggle="collapse"
-                                                data-target="#collapseEstadoTramite" aria-expanded="false"
-                                                aria-controls="collapseEstadoTramite">
+                                            <button class="btn btn-link w-100 text-left text-black p-2"
+                                                data-toggle="collapse" data-target="#collapseEstadoTramite"
+                                                aria-expanded="false" aria-controls="collapseEstadoTramite">
                                                 Estado trámite
                                                 <i class="fa fa-chevron-down ml-1"></i>
                                             </button>
@@ -136,13 +152,14 @@
 
                                     <div id="collapseEstadoTramite" class="collapse"
                                         aria-labelledby="headingEstadoTramite" data-parent="#accordion">
-                                        <div class="card-body pl-3">
-                                            <ul class="list-unstyled">
-                                                <li class="py-1 px-2 hover:bg-success rounded">Trámite 1</li>
-                                                <li class="py-1 px-2 hover:bg-success rounded">Trámite 2</li>
-                                                <li class="py-1 px-2 hover:bg-success rounded">Trámite 3</li>
-                                                <li class="py-1 px-2 hover:bg-success rounded">Trámite 4</li>
-                                                <li class="py-1 px-2 hover:bg-success rounded">Trámite 5</li>
+                                        <div class="card-body p-0">
+                                            <ul class="list-unstyled mb-0">
+                                                <a href="#" class="hover-success text-black">
+                                                    <li class="py-1 px-2 rounded"><u>Activos</u></li>
+                                                </a>
+                                                <a href="#" class="hover-success text-black">
+                                                    <li class="py-1 px-2 rounded"><u>Inactivos</u></li>
+                                                </a>
                                             </ul>
                                         </div>
                                     </div>
@@ -150,9 +167,11 @@
                             </div>
                         </section>
                     </div>
+
                     <!-- Contenido principal -->
                     <div class="col-lg-6 bg-transparent rounded-lg shadow-sm">
-                        <div class="d-flex flex-column gap-3">
+                        <div class="d-flex flex-column gap-3" id="items-container">
+                            <!-- Card 1 -->
                             <div class="border-bottom border-warning pb-4 rounded-3 bg-light">
                                 <div class="row g-3 p-2">
                                     <div class="col-lg-8">
@@ -161,10 +180,10 @@
                                         </a>
                                         <p class="small">
                                             Declaración y pago del impuesto por el ejercicio de cualquier actividad
-                                            comercial, industrial o de
+                                            comercial, industrial o
+                                            de
                                             servicios, en forma permanente u ocasional en inmuebles determinados, con
-                                            establecimientos de comercio o
-                                            sin ellos.
+                                            establecimientos de comercio o sin ellos.
                                         </p>
                                     </div>
                                     <div class="col-lg-4 d-flex flex-wrap gap-3">
@@ -188,22 +207,24 @@
                                                 style="width: 20px; height: 20px; margin-right: 8px;">
                                             <small class="badge badge-danger text-white">Inactivo</small>
                                         </span>
-
-
                                     </div>
                                 </div>
                             </div>
+
+                            <!-- Card 2 -->
                             <div class="border-bottom border-warning pb-4 rounded-3 bg-light">
                                 <div class="row g-3 p-2">
                                     <div class="col-lg-8">
-                                        <a href="#"
-                                            class="text-success font-weight-semibold text-decoration-underline">PAGUE
-                                            AQUI <br>
-                                            Impuesto Predial Unificado</a>
-                                        <p class="small">Declaración y pago del impuesto por el ejercicio de cualquier
-                                            actividad comercial, industrial o de servicios, en forma permanente u
-                                            ocasional
-                                            en inmuebles determinados, con establecimientos de comercio o sin ellos.</p>
+                                        <a href="#" class="text-success font-weight-semibold text-decoration-underline">
+                                            PAGUE AQUI <br> Impuesto Predial Unificado
+                                        </a>
+                                        <p class="small">
+                                            Declaración y pago del impuesto por el ejercicio de cualquier actividad
+                                            comercial, industrial o
+                                            de
+                                            servicios, en forma permanente u ocasional en inmuebles determinados, con
+                                            establecimientos de comercio o sin ellos.
+                                        </p>
                                     </div>
                                     <div class="col-lg-4 d-flex flex-wrap gap-3">
                                         <span class="d-flex align-items-center">
@@ -226,18 +247,18 @@
                                                 style="width: 20px; height: 20px; margin-right: 8px;">
                                             <small class="badge badge-danger text-white">Inactivo</small>
                                         </span>
-
-
                                     </div>
                                 </div>
                             </div>
+
+                            <!-- Card 3 -->
                             <div class="border-bottom border-warning pb-4 rounded-3 bg-light">
                                 <div class="row g-3 p-2">
                                     <div class="col-lg-8">
-                                        <a href="#"
-                                            class="text-success font-weight-semibold text-decoration-underline">Declaración
-                                            Mensual de Retención Impuesto Industria y Comercio</a>
-                                        <p class="small">Sin descrición</p>
+                                        <a href="#" class="text-success font-weight-semibold text-decoration-underline">
+                                            Declaración Mensual de Retención Impuesto Industria y Comercio
+                                        </a>
+                                        <p class="small">Sin descripción</p>
                                     </div>
                                     <div class="col-lg-4 d-flex flex-wrap gap-3">
                                         <span class="d-flex align-items-center gap-2">
@@ -262,10 +283,124 @@
                                 </div>
                             </div>
 
+                            <!-- Card 4 -->
+                            <div class="border-bottom border-warning pb-4 rounded-3 bg-light">
+                                <div class="row g-3 p-2">
+                                    <div class="col-lg-8">
+                                        <a href="#" class="text-success font-weight-semibold text-decoration-underline">
+                                            Certificado de estratificación socioeconómica
+                                        </a>
+                                        <p class="small">
+                                            ​Certificar el estrato socio-económico oficial de uno o varios inmuebles
+                                            residenciales, urbanos y rurales que se
+                                            encuentren en jurisdicción del Municipio.
+                                        </p>
+                                    </div>
+                                    <div class="col-lg-4 d-flex flex-wrap gap-3">
+                                        <span class="d-flex align-items-center gap-2">
+                                            <img src="./assets/svg/alert-octagon.svg" alt="" class="img-fluid"
+                                                style="width: 20px; height: 20px; margin-right: 8px;">
+                                            <small class="text-muted">Sin especificación</small>
+                                        </span>
+                                        <span class="d-flex align-items-center gap-2">
+                                            <img src="./assets/dollar-circle-svgrepo-com.svg" alt="" class="img-fluid"
+                                                style="width: 20px; height: 20px; margin-right: 8px;">
+                                            <small>Trámite con costo</small>
+                                        </span>
+                                        <span class="d-flex align-items-center gap-2">
+                                            <img src="./assets/svg/clock.svg" alt="" class="img-fluid"
+                                                style="width: 20px; height: 20px; margin-right: 8px;">
+                                            <small>Duración Sin especificación</small>
+                                        </span>
+                                        <span class="d-flex align-items-center gap-2">
+                                            <img src="./assets/svg/x-circle.svg" alt="" class=""
+                                                style="width: 20px; height: 20px; margin-right: 8px;">
+                                            <small class="badge badge-danger text-white">Inactivo</small>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
 
+                            <!-- Card 5 -->
+                            <div class="border-bottom border-warning pb-4 rounded-3 bg-light">
+                                <div class="row g-3 p-2">
+                                    <div class="col-lg-8">
+                                        <a href="#" class="text-success font-weight-semibold text-decoration-underline">
+                                            Concepto del uso de suelo
+                                        </a>
+                                        <p class="small">
+                                            ​Obtener el dictamen escrito sobre uso o usos permitidos en un predio o
+                                            edificación, de conformidad con las normas
+                                            urbanísticas del plan de ordenamiento territorial y los instrumentos que lo
+                                            desarrollen.
+                                        </p>
+                                    </div>
+                                    <div class="col-lg-4 d-flex flex-wrap gap-3">
+                                        <span class="d-flex align-items-center gap-2">
+                                            <img src="./assets/svg/alert-octagon.svg" alt="" class="img-fluid"
+                                                style="width: 20px; height: 20px; margin-right: 8px;">
+                                            <small class="text-muted">Sin especificación</small>
+                                        </span>
+                                        <span class="d-flex align-items-center gap-2">
+                                            <img src="./assets/dollar-circle-svgrepo-com.svg" alt="" class="img-fluid"
+                                                style="width: 20px; height: 20px; margin-right: 8px;">
+                                            <small>Trámite con costo</small>
+                                        </span>
+                                        <span class="d-flex align-items-center gap-2">
+                                            <img src="./assets/svg/clock.svg" alt="" class="img-fluid"
+                                                style="width: 20px; height: 20px; margin-right: 8px;">
+                                            <small>Duración Sin especificación</small>
+                                        </span>
+                                        <span class="d-flex align-items-center gap-2">
+                                            <img src="./assets/svg/x-circle.svg" alt="" class=""
+                                                style="width: 20px; height: 20px; margin-right: 8px;">
+                                            <small class="badge badge-danger text-white">Inactivo</small>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
 
+                            <!-- Card 6 -->
+                            <div class="border-bottom border-warning pb-4 rounded-3 bg-light">
+                                <div class="row g-3 p-2">
+                                    <div class="col-lg-8">
+                                        <a href="#" class="text-success font-weight-semibold text-decoration-underline">
+                                            Impuesto al degüello de ganado mayor
+
+                                        </a>
+                                        <p class="small">
+                                            ​Declaración y pago que todo propietario o poseedor debe realizar por el
+                                            sacrificio de ganado mayor de la raza bovina o
+                                            equina destinado a la comercialización en canal.
+                                        </p>
+                                    </div>
+                                    <div class="col-lg-4 d-flex flex-wrap gap-3">
+                                        <span class="d-flex align-items-center gap-2">
+                                            <img src="./assets/svg/alert-octagon.svg" alt="" class="img-fluid"
+                                                style="width: 20px; height: 20px; margin-right: 8px;">
+                                            <small class="text-muted">Sin especificación</small>
+                                        </span>
+                                        <span class="d-flex align-items-center gap-2">
+                                            <img src="./assets/dollar-circle-svgrepo-com.svg" alt="" class="img-fluid"
+                                                style="width: 20px; height: 20px; margin-right: 8px;">
+                                            <small>Trámite con costo</small>
+                                        </span>
+                                        <span class="d-flex align-items-center gap-2">
+                                            <img src="./assets/svg/clock.svg" alt="" class="img-fluid"
+                                                style="width: 20px; height: 20px; margin-right: 8px;">
+                                            <small>Duración Sin especificación</small>
+                                        </span>
+                                        <span class="d-flex align-items-center gap-2">
+                                            <img src="./assets/svg/x-circle.svg" alt="" class=""
+                                                style="width: 20px; height: 20px; margin-right: 8px;">
+                                            <small class="badge badge-danger text-white">Inactivo</small>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
+
                     <!-- Sección de ayuda -->
                     <div class="col bg-white rounded-lg border-3 bg-transparent h-full">
                         <div class="bg-light px-1 py-2 rounded mb-2 d-flex align-items-center">
@@ -308,7 +443,7 @@
 
                             <!-- Sección de Experiencia -->
                             <div class="ml-3">
-                                <div class="card">
+                                <div class="card mb-3">
                                     <div class="card-header" id="headingExperiencia">
                                         <h5 class="mb-0">
                                             <button
@@ -321,32 +456,39 @@
                                     </div>
                                     <div id="collapseExperiencia" class="collapse" aria-labelledby="headingExperiencia"
                                         data-parent="#accordionExample">
-                                        <div class="card-body bg-light p-3 rounded-bottom-3">
+                                        <div class="card-body bg-light p-4 rounded-bottom-3">
                                             <ul class="list-unstyled">
-                                                <li class="d-flex flex-wrap justify-content-center">
-                                                    <div class="d-flex gap-5">
-                                                        <article id="easy"
-                                                            class="d-flex flex-column align-items-center justify-content-center cursor-pointer">
-                                                            <div
-                                                                class="border border-success d-flex align-items-center justify-content-center rounded-circle p-2">
-                                                                <img src="./assets/svg/check.svg" alt="">
-                                                            </div>
-                                                            <span class="text-success">FÁCIL</span>
-                                                        </article>
+                                                <li class="mb-3">
+                                                    <div class="d-flex flex-wrap justify-content-center">
+                                                        <div class="d-flex mx-2">
+                                                            <article id="easy"
+                                                                class="d-flex flex-column align-items-center justify-content-center cursor-pointer">
+                                                                <div
+                                                                    class="border border-success d-flex align-items-center justify-content-center rounded-circle p-3">
+                                                                    <img src="./assets/svg/check.svg"
+                                                                        alt="Icono de fácil"
+                                                                        style="width: 24px; height: 24px;">
+                                                                </div>
+                                                                <span class="text-success mt-2">FÁCIL</span>
+                                                            </article>
+                                                        </div>
 
-                                                        <article id="difficult"
-                                                            class="d-flex flex-column align-items-center justify-content-center cursor-pointer">
-                                                            <div
-                                                                class="border border-danger d-flex align-items-center justify-content-center rounded-circle p-2">
-                                                                <img src="./assets/svg/x.svg" alt="">
-                                                            </div>
-                                                            <span class="text-danger">DIFÍCIL</span>
-                                                        </article>
+                                                        <div class="d-flex mx-2">
+                                                            <article id="difficult"
+                                                                class="d-flex flex-column align-items-center justify-content-center cursor-pointer">
+                                                                <div
+                                                                    class="border border-danger d-flex align-items-center justify-content-center rounded-circle p-3">
+                                                                    <img src="./assets/svg/x.svg" alt="Icono de difícil"
+                                                                        style="width: 24px; height: 24px;">
+                                                                </div>
+                                                                <span class="text-danger mt-2">DIFÍCIL</span>
+                                                            </article>
+                                                        </div>
                                                     </div>
                                                 </li>
-                                                <li class="d-flex justify-content-center mt-3">
+                                                <li class="d-flex justify-content-center">
                                                     <a href="#"
-                                                        class="btn btn-outline-success rounded-pill transition-all duration-500">Envía
+                                                        class="btn btn-outline-success rounded-pill px-4 py-2 transition-all duration-500">Envía
                                                         tus
                                                         comentarios</a>
                                                 </li>
@@ -355,6 +497,7 @@
                                     </div>
                                 </div>
                             </div>
+
                         </div>
                     </div>
 
@@ -363,7 +506,22 @@
 
                 </div>
             </div>
+
         </section>
+        <!-- Paginator -->
+        <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-center">
+                <li class="page-item disabled" id="prev-page">
+                    <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Anterior</a>
+                </li>
+                <li class="page-item active"><a class="page-link" href="#" data-page="1">1</a></li>
+                <li class="page-item"><a class="page-link" href="#" data-page="2">2</a></li>
+
+                <li class="page-item" id="next-page">
+                    <a class="page-link" href="#">Siguiente</a>
+                </li>
+            </ul>
+        </nav>
 
 
     </main>

@@ -1,0 +1,28 @@
+.hover-success:hover li {
+  background-color: #608f7d;
+  color: white;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
+.text-black {
+  color: #000 !important;
+}
+
+.principal-color {
+  color: #608f7d;
+}
+
+.custom-btn {
+  background-color: #608f7d;
+  border-color: #1f4134;
+}
+
+.custom-btn:hover {
+  background-color: #1f4134;
+  border-color: #1f4134;
+}
+
+
+
