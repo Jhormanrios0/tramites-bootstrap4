@@ -1,0 +1,387 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Tramites bs4</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles/main.css">
+</head>
+
+<body>
+
+    <main class="mt-5">
+        <section class="d-flex justify-content-center">
+            <div class="container bg-transparent">
+                <div class="row g-4">
+                    <!-- Sidebar de búsqueda y filtros -->
+                    <div class="col-lg-3 bg-transparent rounded-lg px-4">
+                        <section class="rounded-3 bg-light p-lg-3">
+                            <h2 class="h5 font-weight-semibold text-gray-800 mb-4">Buscar</h2>
+                            <div class="mb-4">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Buscar trámite">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-success" type="button" id="btnSearchTramite">
+                                            <img class="w-25" src="./assets/svg/search.svg" alt="">
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3 class="h6 font-weight-semibold text-gray-800 mb-4">Filtrar por:</h3>
+
+                            <div id="accordion">
+                                <!-- Dependencia -->
+                                <div class="card mb-4">
+                                    <div class="card-header" id="headingDependencia">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-link w-100 text-left" data-toggle="collapse"
+                                                data-target="#collapseDependencia" aria-expanded="true"
+                                                aria-controls="collapseDependencia">
+                                                Dependencia
+                                                <i class="fa fa-chevron-down ml-1"></i>
+                                            </button>
+                                        </h5>
+                                    </div>
+
+                                    <div id="collapseDependencia" class="collapse" aria-labelledby="headingDependencia"
+                                        data-parent="#accordion">
+                                        <div class="card-body pl-3">
+                                            <ul class="list-unstyled">
+                                                <li class="py-1 px-2 hover:bg-success rounded">Dependencia 1</li>
+                                                <li class="py-1 px-2 hover:bg-success rounded">Dependencia 2</li>
+                                                <li class="py-1 px-2 hover:bg-success rounded">Dependencia 3</li>
+                                                <li class="py-1 px-2 hover:bg-success rounded">Dependencia 4</li>
+                                                <li class="py-1 px-2 hover:bg-success rounded">Dependencia 5</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Estado automatización -->
+                                <div class="card mb-4">
+                                    <div class="card-header" id="headingEstado">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-link w-100 text-left" data-toggle="collapse"
+                                                data-target="#collapseEstado" aria-expanded="false"
+                                                aria-controls="collapseEstado">
+                                                Estado automatización
+                                                <i class="fa fa-chevron-down ml-1"></i>
+                                            </button>
+                                        </h5>
+                                    </div>
+
+                                    <div id="collapseEstado" class="collapse" aria-labelledby="headingEstado"
+                                        data-parent="#accordion">
+                                        <div class="card-body pl-3">
+                                            <ul class="list-unstyled">
+                                                <li class="py-1 px-2 hover:bg-success rounded">Automatización 1</li>
+                                                <li class="py-1 px-2 hover:bg-success rounded">Automatización 2</li>
+                                                <li class="py-1 px-2 hover:bg-success rounded">Automatización 3</li>
+                                                <li class="py-1 px-2 hover:bg-success rounded">Automatización 4</li>
+                                                <li class="py-1 px-2 hover:bg-success rounded">Automatización 5</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Costo -->
+                                <div class="card mb-4">
+                                    <div class="card-header" id="headingCosto">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-link w-100 text-left" data-toggle="collapse"
+                                                data-target="#collapseCosto" aria-expanded="false"
+                                                aria-controls="collapseCosto">
+                                                Costo
+                                                <i class="fa fa-chevron-down ml-1"></i>
+                                            </button>
+                                        </h5>
+                                    </div>
+
+                                    <div id="collapseCosto" class="collapse" aria-labelledby="headingCosto"
+                                        data-parent="#accordion">
+                                        <div class="card-body pl-3">
+                                            <ul class="list-unstyled">
+                                                <a href="#">
+                                                    <li class="py-1 px-2 hover:bg-success rounded">Costo 1</li>
+                                                </a>
+
+                                                <li class="py-1 px-2 hover:bg-success rounded">Costo 2</li>
+                                                <li class="py-1 px-2 hover:bg-success rounded">Costo 3</li>
+                                                <li class="py-1 px-2 hover:bg-success rounded">Costo 4</li>
+                                                <li class="py-1 px-2 hover:bg-success rounded">Costo 5</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Estado trámite -->
+                                <div class="card mb-4">
+                                    <div class="card-header" id="headingEstadoTramite">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-link w-100 text-left" data-toggle="collapse"
+                                                data-target="#collapseEstadoTramite" aria-expanded="false"
+                                                aria-controls="collapseEstadoTramite">
+                                                Estado trámite
+                                                <i class="fa fa-chevron-down ml-1"></i>
+                                            </button>
+                                        </h5>
+                                    </div>
+
+                                    <div id="collapseEstadoTramite" class="collapse"
+                                        aria-labelledby="headingEstadoTramite" data-parent="#accordion">
+                                        <div class="card-body pl-3">
+                                            <ul class="list-unstyled">
+                                                <li class="py-1 px-2 hover:bg-success rounded">Trámite 1</li>
+                                                <li class="py-1 px-2 hover:bg-success rounded">Trámite 2</li>
+                                                <li class="py-1 px-2 hover:bg-success rounded">Trámite 3</li>
+                                                <li class="py-1 px-2 hover:bg-success rounded">Trámite 4</li>
+                                                <li class="py-1 px-2 hover:bg-success rounded">Trámite 5</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <!-- Contenido principal -->
+                    <div class="col-lg-6 bg-transparent rounded-lg shadow-sm">
+                        <div class="d-flex flex-column gap-3">
+                            <div class="border-bottom border-warning pb-4 rounded-3 bg-light">
+                                <div class="row g-3 p-2">
+                                    <div class="col-lg-8">
+                                        <a href="#" class="text-success font-weight-semibold text-decoration-underline">
+                                            Impuesto de industria y comercio y su complementario de avisos y tableros
+                                        </a>
+                                        <p class="small">
+                                            Declaración y pago del impuesto por el ejercicio de cualquier actividad
+                                            comercial, industrial o de
+                                            servicios, en forma permanente u ocasional en inmuebles determinados, con
+                                            establecimientos de comercio o
+                                            sin ellos.
+                                        </p>
+                                    </div>
+                                    <div class="col-lg-4 d-flex flex-wrap gap-3">
+                                        <span class="d-flex align-items-center">
+                                            <img src="./assets/svg/alert-octagon.svg" alt="" class="img-fluid"
+                                                style="width: 20px; height: 20px; margin-right: 8px;">
+                                            <small class="text-muted">Sin especificación</small>
+                                        </span>
+                                        <span class="d-flex align-items-center gap-2">
+                                            <img src="./assets/dollar-circle-svgrepo-com.svg" alt="" class="img-fluid"
+                                                style="width: 20px; height: 20px; margin-right: 8px;">
+                                            <small>Trámite con costo</small>
+                                        </span>
+                                        <span class="d-flex align-items-center gap-2">
+                                            <img src="./assets/svg/clock.svg" alt="" class="img-fluid"
+                                                style="width: 20px; height: 20px; margin-right: 8px;">
+                                            <small>Duración Sin especificación</small>
+                                        </span>
+                                        <span class="d-flex align-items-center gap-2">
+                                            <img src="./assets/svg/x-circle.svg" alt="" class=""
+                                                style="width: 20px; height: 20px; margin-right: 8px;">
+                                            <small class="badge badge-danger text-white">Inactivo</small>
+                                        </span>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="border-bottom border-warning pb-4 rounded-3 bg-light">
+                                <div class="row g-3 p-2">
+                                    <div class="col-lg-8">
+                                        <a href="#"
+                                            class="text-success font-weight-semibold text-decoration-underline">PAGUE
+                                            AQUI <br>
+                                            Impuesto Predial Unificado</a>
+                                        <p class="small">Declaración y pago del impuesto por el ejercicio de cualquier
+                                            actividad comercial, industrial o de servicios, en forma permanente u
+                                            ocasional
+                                            en inmuebles determinados, con establecimientos de comercio o sin ellos.</p>
+                                    </div>
+                                    <div class="col-lg-4 d-flex flex-wrap gap-3">
+                                        <span class="d-flex align-items-center">
+                                            <img src="./assets/svg/alert-octagon.svg" alt="" class="img-fluid"
+                                                style="width: 20px; height: 20px; margin-right: 8px;">
+                                            <small class="text-muted">Sin especificación</small>
+                                        </span>
+                                        <span class="d-flex align-items-center gap-2">
+                                            <img src="./assets/dollar-circle-svgrepo-com.svg" alt="" class="img-fluid"
+                                                style="width: 20px; height: 20px; margin-right: 8px;">
+                                            <small>Trámite con costo</small>
+                                        </span>
+                                        <span class="d-flex align-items-center gap-2">
+                                            <img src="./assets/svg/clock.svg" alt="" class="img-fluid"
+                                                style="width: 20px; height: 20px; margin-right: 8px;">
+                                            <small>Duración Sin especificación</small>
+                                        </span>
+                                        <span class="d-flex align-items-center gap-2">
+                                            <img src="./assets/svg/x-circle.svg" alt="" class=""
+                                                style="width: 20px; height: 20px; margin-right: 8px;">
+                                            <small class="badge badge-danger text-white">Inactivo</small>
+                                        </span>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="border-bottom border-warning pb-4 rounded-3 bg-light">
+                                <div class="row g-3 p-2">
+                                    <div class="col-lg-8">
+                                        <a href="#"
+                                            class="text-success font-weight-semibold text-decoration-underline">Declaración
+                                            Mensual de Retención Impuesto Industria y Comercio</a>
+                                        <p class="small">Sin descrición</p>
+                                    </div>
+                                    <div class="col-lg-4 d-flex flex-wrap gap-3">
+                                        <span class="d-flex align-items-center gap-2">
+                                            <i class="fa fa-ban"></i>
+                                            <small class="text-muted">Sin especificación</small>
+                                        </span>
+                                        <span class="d-flex align-items-center gap-2">
+                                            <div class="rounded-circle border border-dark p-2">
+                                                <i class="fa fa-dollar-sign"></i>
+                                            </div>
+                                            <small>Trámite con costo</small>
+                                        </span>
+                                        <span class="d-flex align-items-center gap-2">
+                                            <i class="fa fa-clock"></i>
+                                            <small>Duración Sin especificación</small>
+                                        </span>
+                                        <span class="d-flex align-items-center gap-2">
+                                            <i class="fa fa-times-circle text-danger"></i>
+                                            <small class="badge badge-danger text-white">Inactivo</small>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                    <!-- Sección de ayuda -->
+                    <div class="col bg-white rounded-lg border-3 bg-transparent h-full">
+                        <div class="bg-light px-1 py-2 rounded mb-2 d-flex align-items-center">
+                            <h2
+                                class="h5 fw-bold text-dark pl-2 d-flex align-items-center mx-auto justify-content-center text-center">
+                                Te explicamos con tutoriales
+                            </h2>
+                        </div>
+
+                        <div id="accordionExample">
+                            <!-- Sección de Dudas -->
+                            <div class="mb-2 ml-3">
+                                <div class="card">
+                                    <div class="card-header" id="headingDudas">
+                                        <h5 class="mb-0">
+                                            <button
+                                                class="w-100 fw-semibold bg-light border-0 text-left text-black py-2 rounded-top-3 outline-none focus:shadow-md transition duration-300"
+                                                type="button" data-toggle="collapse" data-target="#collapseDudas"
+                                                aria-expanded="false" aria-controls="collapseDudas">
+                                                ¿Tienes dudas?
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div id="collapseDudas" class="collapse" aria-labelledby="headingDudas"
+                                        data-parent="#accordionExample">
+                                        <div class="card-body bg-light p-4 rounded-bottom-3">
+                                            <ul class="list-unstyled">
+                                                <li class="mb-2 text-secondary">Sobre este trámite o consulta</li>
+                                                <li class="mb-2 text-primary text-decoration-underline">
+                                                    <a href="#">Enviar correo</a>
+                                                </li>
+                                                <li class="mb-2 text-primary text-decoration-underline">
+                                                    <a href="#">(+57) 608 645 1867</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Sección de Experiencia -->
+                            <div class="ml-3">
+                                <div class="card">
+                                    <div class="card-header" id="headingExperiencia">
+                                        <h5 class="mb-0">
+                                            <button
+                                                class="w-100 fw-semibold bg-light border-0 text-left text-black py-2 rounded-top-3 outline-none focus:shadow-md transition duration-300"
+                                                type="button" data-toggle="collapse" data-target="#collapseExperiencia"
+                                                aria-expanded="false" aria-controls="collapseExperiencia">
+                                                ¿Cómo fue tu experiencia durante el proceso?
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    <div id="collapseExperiencia" class="collapse" aria-labelledby="headingExperiencia"
+                                        data-parent="#accordionExample">
+                                        <div class="card-body bg-light p-3 rounded-bottom-3">
+                                            <ul class="list-unstyled">
+                                                <li class="d-flex flex-wrap justify-content-center">
+                                                    <div class="d-flex gap-5">
+                                                        <article id="easy"
+                                                            class="d-flex flex-column align-items-center justify-content-center cursor-pointer">
+                                                            <div
+                                                                class="border border-success d-flex align-items-center justify-content-center rounded-circle p-2">
+                                                                <img src="./assets/svg/check.svg" alt="">
+                                                            </div>
+                                                            <span class="text-success">FÁCIL</span>
+                                                        </article>
+
+                                                        <article id="difficult"
+                                                            class="d-flex flex-column align-items-center justify-content-center cursor-pointer">
+                                                            <div
+                                                                class="border border-danger d-flex align-items-center justify-content-center rounded-circle p-2">
+                                                                <img src="./assets/svg/x.svg" alt="">
+                                                            </div>
+                                                            <span class="text-danger">DIFÍCIL</span>
+                                                        </article>
+                                                    </div>
+                                                </li>
+                                                <li class="d-flex justify-content-center mt-3">
+                                                    <a href="#"
+                                                        class="btn btn-outline-success rounded-pill transition-all duration-500">Envía
+                                                        tus
+                                                        comentarios</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <script src="./js/main.js" defer></script>
+</body>
+
+</html>
