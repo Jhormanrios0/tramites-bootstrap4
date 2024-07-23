@@ -46,3 +46,27 @@
 .filtro {
   display: none;
 }
+
+.border-bottom-green {
+  border-bottom: 2px solid #608f7d;
+}
+
+.pagination .page-link {
+  color: #608f7d;
+}
+
+.pagination .page-item.active .page-link {
+  background-color: #608f7d;
+  border-color: #608f7d;
+  color: white;
+}
+
+.pagination .page-item.disabled .page-link {
+  color: #6c757d;
+}
+
+.pagination .page-link:hover {
+  color: #1f4134;
+  background-color: #e9ecef;
+  border-color: #608f7d;
+}
