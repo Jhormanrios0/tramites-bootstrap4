@@ -89,12 +89,19 @@ document.addEventListener("DOMContentLoaded", function () {
     };
   }
 
+  function normalizeText(text) {
+    return text
+      .normalize("NFD") // Normaliza el texto a la forma canónica descompuesta
+      .replace(/[\u0300-\u036f]/g, "") // Elimina los caracteres de acento
+      .toLowerCase(); // Convierte a minúsculas
+  }
+
   const searchHandler = debounce((e) => {
-    const searchText = e.target.value.toLowerCase();
+    const searchText = normalizeText(e.target.value);
     let found = false;
 
     items.forEach((item) => {
-      const title = item.querySelector("a").textContent.toLowerCase();
+      const title = normalizeText(item.querySelector("a").textContent);
       if (title.includes(searchText)) {
         item.classList.remove("filtro");
         found = true;
@@ -115,42 +122,4 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Initial load
   showPage(1);
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-  const itemsContainer = document.getElementById("items-container");
-  const items = Array.from(itemsContainer.getElementsByClassName("item-card"));
-  const buscador = document.getElementById("buscador");
-  const noResults = document.getElementById("noResults");
-
-  function debounce(func, wait) {
-    let timeout;
-    return function (...args) {
-      const context = this;
-      clearTimeout(timeout);
-      timeout = setTimeout(() => func.apply(context, args), wait);
-    };
-  }
-
-  const searchHandler = debounce((e) => {
-    const searchText = e.target.value.toLowerCase();
-    let found = false;
-
-    items.forEach((item) => {
-      const title = item.querySelector("a").textContent.toLowerCase();
-      if (title.includes(searchText)) {
-        item.classList.remove("filtro");
-        found = true;
-      } else {
-        item.classList.add("filtro");
-      }
-    });
-
-    noResults.classList.toggle("hidden", found);
-  }, 300);
-
-  buscador.addEventListener("keyup", (e) => {
-    if (e.key === "Escape") e.target.value = "";
-    searchHandler(e);
-  });
 });
