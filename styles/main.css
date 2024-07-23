@@ -24,5 +24,18 @@
   border-color: #1f4134;
 }
 
+.color-inactivo {
+  color: #dc3545;
+}
 
+.color-activo {
+  color: #608f7d;
+}
 
+.color-activo-txt {
+  background-color: #608f7d;
+}
+
+.color-white {
+  color: white;
+}

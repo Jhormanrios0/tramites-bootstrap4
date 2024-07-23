@@ -50,4 +50,17 @@ document.addEventListener("DOMContentLoaded", () => {
   showPage(1);
 });
 
+document.addEventListener("keyup", (e) => {
+  if (e.target.matches("#buscador")) {
+    const query = e.target.value.toLowerCase();
 
+    document.querySelectorAll(".item-card").forEach((card) => {
+      const title = card.querySelector("a").textContent.toLowerCase();
+      if (title.includes(query)) {
+        card.style.display = "";
+      } else {
+        card.style.display = "none";
+      }
+    });
+  }
+});
