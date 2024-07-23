@@ -23,6 +23,7 @@
                     <!-- Sidebar de búsqueda y filtros -->
                     <div class="col-lg-3 bg-transparent rounded-lg px-2">
                         <section class="rounded-3 bg-light p-lg-3">
+                            <!-- Input Buscador -->
                             <h2 class="h5 font-weight-semibold text-gray-800 mb-4">Buscar</h2>
                             <div class="mb-4">
                                 <div class="input-group">
@@ -167,11 +168,10 @@
                             </div>
                             <!-- Botón para borrar filtros -->
                             <div class="text-right mt-3">
-                                <button id="reset-filters" class="btn btn-success ">Borrar filtros</button>
+                                <button id="reset-filters" class="btn btn-success">Borrar filtros</button>
                             </div>
                         </section>
                     </div>
-
 
                     <!-- Contenido principal -->
                     <div class="col-lg-6 bg-transparent rounded-lg shadow-sm">
@@ -182,36 +182,30 @@
                                 data-estado="Inactivo">
                                 <div class="row g-3 p-2">
                                     <div class="col-lg-8">
-                                        <!-- titulo card -->
                                         <a href="#" class="text-success font-weight-semibold text-decoration-underline">
                                             Impuesto de industria y comercio y su complementario de avisos y tableros
                                         </a>
-                                        <!-- Descripción card -->
                                         <p class="small">
                                             Declaración y pago del impuesto por el ejercicio de cualquier actividad
-                                            comercial, industrial o
-                                            de
-                                            servicios, en forma permanente u ocasional en inmuebles determinados, con
+                                            comercial, industrial o de servicios, en forma permanente u ocasional en
+                                            inmuebles
+                                            determinados, con
                                             establecimientos de comercio o sin ellos.
                                         </p>
                                     </div>
                                     <div class="col-lg-4 d-flex flex-wrap gap-3">
-                                        <!-- Estado de Automatización -->
                                         <span class="d-flex align-items-center">
                                             <i class="fa-solid fa-ban"></i>
                                             <small class="text-muted ml-2">Sin especificación</small>
                                         </span>
-                                        <!-- costo -->
                                         <span class="d-flex align-items-center">
                                             <i class="fa-solid fa-dollar-sign"></i>
                                             <small class="ml-2">Trámite con costo</small>
                                         </span>
-                                        <!--  -->
                                         <span class="d-flex align-items-center">
                                             <i class="fa-regular fa-clock"></i>
                                             <small class="ml-2">Duración Sin especificación</small>
                                         </span>
-                                        <!-- Estado del tramites -->
                                         <span class="d-flex align-items-center">
                                             <i class="color-inactivo fa-solid fa-circle-xmark"></i>
                                             <small class="badge badge-danger text-white ml-2">Inactivo</small>
@@ -219,7 +213,6 @@
                                     </div>
                                 </div>
                             </div>
-
                             <!-- Card 2 -->
                             <div class="border-bottom border-warning pb-4 rounded-3 bg-light item-card"
                                 data-dependencia="Sin especificación" data-costo="Trámite con costo"
@@ -527,6 +520,12 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- Paginador -->
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination justify-content-center"></ul>
+                        </nav>
+                        <p id="noResults" class="text-danger hidden">No se encontraron resultados</p>
+
                     </div>
 
 
@@ -621,25 +620,12 @@
 
 
                 </div>
+
+
             </div>
 
         </section>
-        <!-- Paginator -->
-        <nav aria-label="Page navigation example">
-            <ul class="pagination justify-content-center">
-                <li class="page-item disabled" id="prev-page">
-                    <a class="page-link" href="#" tabindex="-1" aria-disabled="true"><i
-                            class="fa-solid fa-chevron-left"></i></a>
-                </li>
-                <li class="page-item active"><a class="page-link" href="#" data-page="1">1</a></li>
-                <li class="page-item"><a class="page-link" href="#" data-page="2">2</a></li>
-                <li class="page-item"><a class="page-link" href="#" data-page="2">3</a></li>
 
-                <li class="page-item" id="next-page">
-                    <a class="page-link" href="#"><i class="fa-solid fa-chevron-right"></i></a>
-                </li>
-            </ul>
-        </nav>
 
 
     </main>
@@ -659,7 +645,7 @@
 
     <script src="./js/main.js" defer></script>
     <script src="./js/filtrobtn.js" defer></script>
-    <script src="./js/experiencia.js"defer></script>
+    <script src="./js/experiencia.js" defer></script>
 </body>
 
 </html>

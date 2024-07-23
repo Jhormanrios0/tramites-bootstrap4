@@ -39,3 +39,10 @@
 .color-white {
   color: white;
 }
+
+.hidden {
+  display: none;
+}
+.filtro {
+  display: none;
+}

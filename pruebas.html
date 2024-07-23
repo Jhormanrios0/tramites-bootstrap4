@@ -1,81 +1,92 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paginación y Búsqueda</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <title>Pagination with Search</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        .hidden {
+            display: none;
+        }
+
+        .filtro {
+            display: none;
+        }
+    </style>
 </head>
 
 <body>
-    <div class="container mt-5">
-        <input type="text" id="buscador" class="form-control mb-4" placeholder="Buscar...">
-        <div id="items-container" class="row">
-            <!-- Aquí van las tarjetas de los ítems -->
-            <div class="col-md-4 item-card">
-                <div class="card">
-                    <div class="card-body">
-                        <a href="#">Item 1</a>
+    <div class="container">
+        <div class="row">
+            <!-- Input Buscador -->
+            <h2 class="h5 font-weight-semibold text-gray-800 mb-4">Buscar</h2>
+            <div class="mb-4">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Buscar trámite" id="buscador">
+                    <div class="input-group-append">
+                        <button class="btn custom-btn" type="button" id="btnSearchTramite">
+                            <i class="fa-solid fa-magnifying-glass color-white"></i>
+                        </button>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 item-card">
-                <div class="card">
-                    <div class="card-body">
-                        <a href="#">Item 2</a>
+
+            <!-- Contenido principal -->
+            <div class="col-lg-6 bg-transparent rounded-lg shadow-sm">
+                <div class="d-flex flex-column gap-3" id="items-container">
+                    <!-- Card 1 -->
+                    <div class="border-bottom border-warning pb-4 rounded-3 bg-light item-card"
+                        data-dependencia="Sin especificación" data-costo="Trámite con costo" data-estado="Inactivo">
+                        <div class="row g-3 p-2">
+                            <div class="col-lg-8">
+                                <a href="#" class="text-success font-weight-semibold text-decoration-underline">
+                                    Impuesto de industria y comercio y su complementario de avisos y tableros
+                                </a>
+                                <p class="small">
+                                    Declaración y pago del impuesto por el ejercicio de cualquier actividad
+                                    comercial, industrial o de servicios, en forma permanente u ocasional en inmuebles
+                                    determinados, con
+                                    establecimientos de comercio o sin ellos.
+                                </p>
+                            </div>
+                            <div class="col-lg-4 d-flex flex-wrap gap-3">
+                                <span class="d-flex align-items-center">
+                                    <i class="fa-solid fa-ban"></i>
+                                    <small class="text-muted ml-2">Sin especificación</small>
+                                </span>
+                                <span class="d-flex align-items-center">
+                                    <i class="fa-solid fa-dollar-sign"></i>
+                                    <small class="ml-2">Trámite con costo</small>
+                                </span>
+                                <span class="d-flex align-items-center">
+                                    <i class="fa-regular fa-clock"></i>
+                                    <small class="ml-2">Duración Sin especificación</small>
+                                </span>
+                                <span class="d-flex align-items-center">
+                                    <i class="color-inactivo fa-solid fa-circle-xmark"></i>
+                                    <small class="badge badge-danger text-white ml-2">Inactivo</small>
+                                </span>
+                            </div>
+                        </div>
                     </div>
+                    <!-- Additional cards here -->
                 </div>
+                <!-- Paginador -->
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination justify-content-center"></ul>
+                </nav>
+                <p id="noResults" class="text-red-500 hidden">No se encontraron resultados</p>
             </div>
-            <div class="col-md-4 item-card">
-                <div class="card">
-                    <div class="card-body">
-                        <a href="#">Item 3</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 item-card">
-                <div class="card">
-                    <div class="card-body">
-                        <a href="#">Item 4</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 item-card">
-                <div class="card">
-                    <div class="card-body">
-                        <a href="#">Item 5</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 item-card">
-                <div class="card">
-                    <div class="card-body">
-                        <a href="#">Item 6</a>
-                    </div>
-                </div>
-            </div>
-            <!-- Agrega más ítems aquí si es necesario -->
         </div>
-        <!-- Paginador -->
-        <nav aria-label="Page navigation example">
-            <ul class="pagination justify-content-center">
-                <li class="page-item disabled" id="prev-page">
-                    <a class="page-link" href="#" tabindex="-1" aria-disabled="true"><i
-                            class="fa-solid fa-chevron-left"></i></a>
-                </li>
-                <li class="page-item active"><a class="page-link" href="#" data-page="1">1</a></li>
-                <li class="page-item"><a class="page-link" href="#" data-page="2">2</a></li>
-                <li class="page-item"><a class="page-link" href="#" data-page="3">3</a></li>
-                <li class="page-item" id="next-page">
-                    <a class="page-link" href="#"><i class="fa-solid fa-chevron-right"></i></a>
-                </li>
-            </ul>
-        </nav>
     </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-       
+        // JavaScript code goes here
     </script>
 </body>
 
