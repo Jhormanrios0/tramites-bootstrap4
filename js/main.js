@@ -91,9 +91,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function normalizeText(text) {
     return text
-      .normalize("NFD") // Normaliza el texto a la forma canónica descompuesta
-      .replace(/[\u0300-\u036f]/g, "") // Elimina los caracteres de acento
-      .toLowerCase(); // Convierte a minúsculas
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .toLowerCase();
   }
 
   const searchHandler = debounce((e) => {
@@ -120,6 +120,5 @@ document.addEventListener("DOMContentLoaded", function () {
     searchHandler(e);
   });
 
-  // Initial load
   showPage(1);
 });

@@ -1,20 +1,32 @@
 $(document).ready(function () {
   $("#easy").click(function () {
-    $("#easy").toggleClass("btn-success text-white");
-    $("#difficult").removeClass("btn-danger text-white");
+    $("#easy").toggleClass("facil");
+    $("#difficult").removeClass("dificil");
   });
 
   $("#difficult").click(function () {
-    $("#difficult").toggleClass("btn-danger text-white");
-    $("#easy").removeClass("btn-success text-white");
+    $("#difficult").toggleClass("dificil");
+    $("#easy").removeClass("facil");
   });
 
   $("#sendComments").click(function () {
     let comments = $("#comments").val();
     if (comments) {
-      alert("¡Gracias por tus comentarios!\n\n" + comments);
+      $("#alertSuccess").removeClass("d-none");
+      $("#alertError").addClass("d-none"); // Ocultar el mensaje de error si está visible
+
+      
+      $("#comments").val("");
+
+      setTimeout(function () {
+        $("#alertSuccess").addClass("d-none");
+      }, 2000);
     } else {
-      alert("Por favor, escribe tus comentarios.");
+      $("#alertError").removeClass("d-none");
+
+      setTimeout(function () {
+        $("#alertError").addClass("d-none");
+      }, 2000);
     }
   });
 });

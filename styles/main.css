@@ -70,3 +70,48 @@
   background-color: #e9ecef;
   border-color: #608f7d;
 }
+
+.facil {
+  color: #fff;
+  background-color: #608f7d;
+}
+
+.dificil {
+  color: #fff;
+  background-color: #dc3545;
+}
+
+.btn-facil,
+.btn-dificil {
+  margin: 0 5px;
+}
+
+.btn-facil {
+  color: #608f7d;
+  border: 2px solid #608f7d;
+  border-radius: 8px;
+  background-color: transparent;
+  padding: 8px 16px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-dificil {
+  color: #dc3545;
+  border: 2px solid #dc3545;
+  border-radius: 8px;
+  background-color: transparent;
+  padding: 8px 16px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-facil:hover,
+.facil {
+  background-color: #608f7d;
+  color: #fff;
+}
+
+.btn-dificil:hover,
+.dificil {
+  background-color: #dc3545;
+  color: #fff;
+}

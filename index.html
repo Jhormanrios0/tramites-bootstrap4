@@ -3,11 +3,11 @@
 
 <head>
     <title>Tramites bs4</title>
-    <!-- Required meta tags -->
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="./styles/main.css">
@@ -24,7 +24,7 @@
                     <div class="col-lg-3 bg-transparent rounded-lg px-2">
                         <section class="rounded-3 bg-light p-lg-3">
                             <!-- Input Buscador -->
-                            <h2 class="h5 font-weight-semibold text-gray-800 mb-4">Buscar</h2>
+                            <h2 class="h5 font-weight-semibold  mb-4">Buscar</h2>
                             <div class="mb-4">
                                 <div class="input-group">
                                     <input type="text" class="form-control" placeholder="Buscar trámite" id="buscador">
@@ -46,7 +46,7 @@
                                                 data-toggle="collapse" data-target="#collapseDependencia"
                                                 aria-expanded="true" aria-controls="collapseDependencia">
                                                 Dependencia
-                                                <i class="fa fa-chevron-down ml-1"></i>
+                                                <i class="fa fa-chevron-down ml-1 "></i>
                                             </button>
                                         </h5>
                                     </div>
@@ -1178,12 +1178,10 @@
                                                 <li class="mb-3">
                                                     <div class="d-flex flex-wrap justify-content-center">
                                                         <div class="d-flex mx-2">
-                                                            <button id="easy"
-                                                                class="btn btn-outline-success">FÁCIL</button>
+                                                            <button id="easy" class="btn-facil">FÁCIL</button>
                                                         </div>
                                                         <div class="d-flex mx-2">
-                                                            <button id="difficult"
-                                                                class="btn btn-outline-danger">DIFÍCIL</button>
+                                                            <button id="difficult" class="btn-dificil">DIFÍCIL</button>
                                                         </div>
                                                     </div>
                                                 </li>
@@ -1194,34 +1192,33 @@
                                                 <li class="d-flex justify-content-center">
                                                     <button id="sendComments"
                                                         class="btn btn-outline-success rounded-pill px-4 py-2 transition-all duration-500">Envía
-                                                        tus comentarios</button>
+                                                        tus
+                                                        comentarios</button>
                                                 </li>
                                             </ul>
+                                        </div>
+                                        <div id="alertSuccess" class="alert alert-success d-none" role="alert">
+                                            <strong>¡Mensaje Enviado!</strong> <br> Su mensaje fue enviado <a href="#"
+                                                class="alert-link  ">con exito!</a>
+                                        </div>
+                                        <div id="alertError" class="alert alert-danger d-none" role="alert">
+                                            <strong>¡Para envía un Mensaje!</strong> <a href="#"
+                                                class="alert-link">Debes
+                                                escribir al menos
+                                                un (1) caracter.</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-
                         </div>
                     </div>
-
-
-
-
                 </div>
-
-
             </div>
-
         </section>
-
-
-
     </main>
 
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
@@ -1231,10 +1228,9 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-
     <script src="./js/main.js" defer></script>
-    <script src="./js/filtrobtn.js" defer></script>
     <script src="./js/experiencia.js" defer></script>
+
 </body>
 
 </html>
